@@ -1,0 +1,435 @@
+  /*integracion de la fuente Open Sans desde google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+/*inicio de los estilos de la clase contenedor*/
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/*inicio de los estilos de la seccion header*/
+
+.header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(72, 197, 239, 0.427) 0%, rgba(111, 133, 214, 0.345) 100%),url('../assets/bg-img.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*estilos del head, los textos del hero*/
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+/* estilos del icono del menu o hamburguer*/
+
+.hamburguer{
+    z-index: 10;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+}
+
+/*estilos del menun de navegacion*/
+
+.menu__navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg,#667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    /* transition: transform .3s ease-in-out;*/
+   
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+
+}
+
+.spread{  /*lase especial ojo */
+    transform: translate(0);
+
+}
+
+.menu__navegacion a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.cta{
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 20px 35px;
+    background-color: tomato;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* estilos de nuestros servicios*/
+
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: #9f8ad0;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor__servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap:wrap ;
+}
+
+.contenedor__servicio img{
+    width: 40%;
+}
+
+.checklist__servicio{
+    width: 45%;
+}
+
+.service{
+    margin-bottom: 20px;
+    
+}
+
+.n__service{
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%,#fbc2eb 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-right: 5px;
+    line-height: 30px;
+}
+
+/* estilos de la seccion galeria o portafolio */
+.gallery{
+    background: #f2f2f2;
+
+}
+
+.contenedor__galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img__galeria{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    background: 0 0 0 6px rgba(0,0,0,.5);
+    cursor: pointer;
+    
+}
+
+.imagen__light{
+    position: fixed;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease-in-out;
+    transform: translate(100%);
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar__imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+    
+}
+
+.showImage{ /*esta es una clase especial creada despues*/
+
+    transform: scale(1);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+    
+}
+
+
+/*estilos dde la sección expertos*/
+
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.cont__expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont__expert img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.n__expert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+/*estilos de la sección footer*/
+
+footer{
+    background: #9f8ad0;
+    padding-bottom: 0.1px;
+
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact__us{
+    width: 40%;
+    color: #fff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social__media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social__media__icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social__media__icon:hover{
+    background: #fff;
+    color: #764ba2;
+}
+
+.social__media__icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{ /*ojo con esta clase*/
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+/*Estilos para hacer el sitio web responsive*/
+
+@media screen and (max-width:800px){
+    .menu__navegacion{
+        width: 50vw;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    /*servicios responsive*/
+
+    .contenedor__servicio img{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .checklist__servicio{
+        width: 80%;
+    }
+
+    .service{
+        margin-bottom: 30px;
+    }
+
+    /*lightbox responsive*/
+
+    .agregar__imagen{
+        width: 80%;
+    }
+
+    /*galeria responsive*/
+    .img__galeria{
+        width: 45%;
+    }
+
+    /*expertos responsive*/
+
+    .cont__expert{
+        width: 80%;
+    }
+
+    /*footer responsive*/
+
+    .footer__content{
+        justify-content: center;
+    }
+    .social__media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .social__media i{
+        margin-left: 0;
+    }
+
+    .contact__us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .social__media__icon{
+        margin-left: 0;
+    }
+}
+
+/*segundo breakpoint*/ 
+
+@media screen and (max-width:500px){
+
+    .menu__navegacion{
+        width: 65vw;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+
+
+    .subtitul{
+        font-size: 20px;
+    }
+
+    .hamburguer{
+        top: 20px;
+        right: 20px;
+    }
+
+    .agregar__imagen{
+        width: 95%;
+    }
+
+    /*galeria*/
+
+    .img__galeria{
+        width: 95%;
+    }
+
+    .social__media{
+        width: 100%;
+    }
+
+    .contact__us{
+        width: 90%;
+    }
+
+    .cta{
+        margin-bottom: 30px;
+    }
+}
